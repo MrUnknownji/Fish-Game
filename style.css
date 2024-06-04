@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+:root {
+  --bg: #131515;
+  --containerColor: #d8c254;
+  --listBg: #a0fa96;
+  --buttonBg: #023d5b;
+  --buttonHoverBg: #075164;
+  --taskInputBg: #f0e1b9;
+}
+
+body {
+  background-image: url("./img/Fishbg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: black;
+  font-size: xx-large;
+}
+.starting-game-div,
+.playing-div,
+.player-name-entering-div,
+.winner-div {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 40px auto;
+  gap: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #d8c25488;
+  backdrop-filter: blur(5px);
+  transition: all 300ms;
+}
+div:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.397);
+}
+button {
+  background-color: var(--buttonBg);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 250ms;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+button:hover {
+  background-color: var(--buttonHoverBg);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+}
+input {
+  outline: none;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: x-large;
+}
+#player-count-input {
+  width: fit-content;
+}
+.player-name-entering-div {
+  display: none;
+  padding: 25px 50px;
+}
+.playing-div {
+  display: none;
+  padding: 25px auto;
+  width: 60vw;
+}
+span {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: x-large;
+}
+#playing-div-text-container {
+  font-size: xx-large;
+  font-weight: 800;
+  margin: 20px;
+}
+.winner-div {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+}
+div[open] {
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
